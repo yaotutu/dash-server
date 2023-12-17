@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CpuinfoModule } from './cpuinfo/cpuinfo.module';
+import { SysteminfoModule } from './systeminfo/systeminfo.module';
 
 @Module({
-  imports: [CpuinfoModule],
+  imports: [SysteminfoModule],
   controllers: [AppController],
   providers: [AppService],
 })
