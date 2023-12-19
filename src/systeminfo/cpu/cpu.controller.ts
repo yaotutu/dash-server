@@ -6,6 +6,11 @@ export class CpuController {
   constructor(private readonly cpuService: CpuService) { }
   @Get()
   async getCpuInfo() {
-    return this.cpuService.dynamic();
+    return this.cpuService.getDynamicInfo();
+  }
+
+  @Get("static")
+  async getCpuStaticInfo() {
+    return this.cpuService.getStaticInfo()
   }
 }
